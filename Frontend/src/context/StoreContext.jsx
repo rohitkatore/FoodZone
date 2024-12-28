@@ -31,7 +31,7 @@ const StoreContextProvider = (props) => {
           await axios.post(url+"/api/cart/remove",
             {itemId},
             {headers:{token:token}}
-          ).then((response)=>console.log(response.data)).catch((err)=>console.log(err)) ;
+          );
         }
     }
 
