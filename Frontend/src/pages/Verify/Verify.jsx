@@ -15,7 +15,7 @@ function Verify() {
     const verifyPayment = async()=>{
         const response = await axios.post(url+"/api/order/verify",{success,orderId}) ;
         if(response.data.success){
-            navigate("https://tomato-ochre.vercel.app/myorders") ;
+            navigate("https://tomato26.vercel.app/myorders") ;
         }else{
             navigate("/") ;
         }
