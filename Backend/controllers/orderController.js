@@ -1,6 +1,5 @@
 import orderModel from "../models/orderModel.js";
 import userModel from "../models/userModel.js"
-import cors from 'cors';
 import Stripe from "stripe" ;
 
 const stripe = new Stripe(process.env.STRIPE_SCRET_KEY) ;
@@ -9,7 +8,6 @@ const stripe = new Stripe(process.env.STRIPE_SCRET_KEY) ;
 const placeOder = async (req,res)=>{
 
     const frontend_url = "https://tomato26.vercel.app";
-    app.use(cors({ origin: frontend_url }));
     try{
         const newOrder = new orderModel({
             userId:req.body.userId ,
